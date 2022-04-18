@@ -4,7 +4,7 @@
   "description": "FE : react.js / BE : nest.js monorepo project  ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "TODO FE, BE 동시에 실행시키는 스크립트 작성 "
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,5 @@
     "url": "https://github.com/Hyunji-P/2022_monorepo_board/issues"
   },
   "homepage": "https://github.com/Hyunji-P/2022_monorepo_board#readme",
-  "workspaces": [
-    "backend",
-    "frontend"
-  ]
+  "workspaces": ["backend","frontend"]
 }
