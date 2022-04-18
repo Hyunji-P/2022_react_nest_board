@@ -1,2 +1,2 @@
 # 2022_monorepo_board
-FE : react.js / BE : rest.js monorepo project
+FE : react.js / BE : nest.js monorepo project
