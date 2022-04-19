@@ -1,7 +1,7 @@
-import { PageOptionsDto } from 'src/common/pagination/page.options.dto';
-import { BoardDto } from 'src/dto/board.dto';
-import { BoardService } from 'src/service/board.service';
-import { PageDto } from './../common/pagination/page.dto';
+import { PageOptionsDto } from "src/common/pagination/page.options.dto";
+import { BoardDto } from "src/dto/board.dto";
+import { BoardService } from "src/service/board.service";
+import { PageDto } from "./../common/pagination/page.dto";
 export declare class BoardController {
     private boardService;
     constructor(boardService: BoardService);

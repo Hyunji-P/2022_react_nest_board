@@ -56,14 +56,14 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], BoardController.prototype, "putBoardById", null);
 __decorate([
-    (0, common_1.Delete)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Delete)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], BoardController.prototype, "deleteBoardById", null);
 BoardController = __decorate([
-    (0, common_1.Controller)('board'),
+    (0, common_1.Controller)("/api/board"),
     __metadata("design:paramtypes", [board_service_1.BoardService])
 ], BoardController);
 exports.BoardController = BoardController;

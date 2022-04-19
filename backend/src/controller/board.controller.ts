@@ -7,18 +7,18 @@ import {
   Post,
   Put,
   Query,
-} from '@nestjs/common';
-import { PageOptionsDto } from 'src/common/pagination/page.options.dto';
-import { BoardDto } from 'src/dto/board.dto';
-import { BoardService } from 'src/service/board.service';
-import { PageDto } from './../common/pagination/page.dto';
+} from "@nestjs/common";
+import { PageOptionsDto } from "src/common/pagination/page.options.dto";
+import { BoardDto } from "src/dto/board.dto";
+import { BoardService } from "src/service/board.service";
+import { PageDto } from "./../common/pagination/page.dto";
 
 /**
  * @brief 게시판 담당 컨트롤러
  * @author Hyunji Park
  * @date 2022.04.15
  */
-@Controller('board')
+@Controller("/api/board")
 export class BoardController {
   constructor(private boardService: BoardService) {}
 
@@ -29,7 +29,7 @@ export class BoardController {
    */
   @Get()
   async getAllBoard(
-    @Query() pageOptionsDto: PageOptionsDto,
+    @Query() pageOptionsDto: PageOptionsDto
   ): Promise<PageDto<BoardDto>> {
     return this.boardService.getAllBoard(pageOptionsDto);
   }
@@ -44,8 +44,8 @@ export class BoardController {
     return;
   }
 
-  @Delete(':id')
-  async deleteBoardById(@Param('id') id: number): Promise<number> {
+  @Delete(":id")
+  async deleteBoardById(@Param("id") id: number): Promise<number> {
     return;
   }
 }
