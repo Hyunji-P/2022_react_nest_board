@@ -1,0 +1,26 @@
+.content {
+  margin-top: 100px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  color: cadetblue;
+  padding: 15px;
+}
+
+.btn-outline-primary {
+  color: cadetblue !important;
+  border-color: cadetblue !important;
+  float: right;
+  margin-bottom: 10px;
+}
+
+.btn-outline-primary:hover {
+  background-color: cadetblue !important;
+  color: white !important;
+}
+
+th {
+  text-align: center;
+}
