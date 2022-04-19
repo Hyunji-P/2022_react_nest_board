@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hyunji-P/2022_monorepo_board.git"
+    "url": "git+https://github.com/Hyunji-P/2022_react_nest_board.git"
   },
   "author": "Hyunji Park",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hyunji-P/2022_monorepo_board/issues"
+    "url": "https://github.com/Hyunji-P/2022_react_nest_board/issues"
   },
-  "homepage": "https://github.com/Hyunji-P/2022_monorepo_board#readme",
+  "homepage": "https://github.com/Hyunji-P/2022_react_nest_board#readme",
   "dependencies": {
     "@nestjs/axios": "^0.0.7",
     "@nestjs/common": "^8.4.4",
