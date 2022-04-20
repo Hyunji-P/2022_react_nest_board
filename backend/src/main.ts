@@ -7,6 +7,6 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe({ transform: true })); // 데코레이션 validation 검증
 
-  await app.listen(3001); // FE : 3000번 
+  await app.listen(3001); // FE : 3000번
 }
 bootstrap();

@@ -1,4 +1,4 @@
-import { PageOptionsDto } from './page.options.dto';
+import { PageOptionsDto } from "./page.options.dto";
 export declare class PageMetaDto {
     readonly page: number;
     readonly size: number;

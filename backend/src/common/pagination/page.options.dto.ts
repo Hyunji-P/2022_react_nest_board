@@ -1,5 +1,5 @@
-import { Type } from 'class-transformer';
-import { IsInt, IsOptional, Max, Min } from 'class-validator';
+import { Type } from "class-transformer";
+import { IsInt, IsOptional, Max, Min } from "class-validator";
 
 /**
  * @brief 페이징 처리 시 기본 default 값 지정 및 파라미터 Input 시 변경됨
@@ -8,7 +8,7 @@ import { IsInt, IsOptional, Max, Min } from 'class-validator';
  */
 export class PageOptionsDto {
   @IsOptional()
-  readonly order?: string = 'DESC'; // 내림차순
+  readonly order?: string = "DESC"; // 내림차순
 
   @Type(() => Number)
   @IsInt()

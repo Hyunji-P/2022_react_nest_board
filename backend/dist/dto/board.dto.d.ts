@@ -1,7 +1,7 @@
 export declare class BoardDto {
-    private uuid;
-    private title;
-    private content;
-    private views;
-    private regDate;
+    uuid: number;
+    title: string;
+    content: string;
+    views: number;
+    regDate: Date;
 }

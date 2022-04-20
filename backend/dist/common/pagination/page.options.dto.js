@@ -14,7 +14,7 @@ const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 class PageOptionsDto {
     constructor() {
-        this.order = 'DESC';
+        this.order = "DESC";
         this.page = 1;
         this.size = 10;
     }

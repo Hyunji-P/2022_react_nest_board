@@ -9,6 +9,14 @@ h2 {
   padding: 15px;
 }
 
+.error {
+  font-size: 200px;
+  font-weight: bold;
+  color: cadetblue;
+  text-align: center;
+  margin-top: 10%;
+}
+
 .btn-outline-primary {
   color: cadetblue !important;
   border-color: cadetblue !important;
@@ -23,4 +31,19 @@ h2 {
 
 th {
   text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  color: white !important;
+  background-color: cadetblue;
+  border-color: cadetblue;
+}
+
+.page-link {
+  color: cadetblue !important;
 }
