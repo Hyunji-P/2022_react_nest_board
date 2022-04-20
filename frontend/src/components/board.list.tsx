@@ -4,6 +4,7 @@ import { Container, Table, Button } from "react-bootstrap";
 import { BoardDto } from "./../../../backend/src/dto/board.dto";
 import moment from "moment";
 import Paging from "./pagination/paging";
+import { useSearchParams } from "react-router-dom";
 
 /**
  * @brief 게시판 목록 컴포넌트
@@ -32,12 +33,16 @@ function BoardList(): React.ReactElement {
     hasNextPage: false,
   });
 
+  const [searchParams] = useSearchParams();
+
   useEffect(() => {
-    axios.get("api/board").then((res) => {
+    const params = Object.fromEntries([...searchParams]);
+
+    axios.get("api/board", { params: params }).then((res) => {
       setList(res.data.list);
       setPageInfo(res.data.pageInfo);
     });
-  }, []);
+  }, [searchParams]);
 
   return (
     <Container className="content">
