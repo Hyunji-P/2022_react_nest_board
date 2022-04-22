@@ -14,10 +14,13 @@ import { useSearchParams } from "react-router-dom";
 
 // 자식 컴포넌트로 넘겨주기 위해 export
 export type PageType = {
-  page: number;
-  size: number;
-  itemCount: number;
-  pageCount: number;
+  curPage: number;
+  perPage: number;
+  listCnt: number;
+  allRangeCnt: number;
+  range: number;
+  startPage: number;
+  endPage: number;
   hasPreviousPage: boolean;
   hasNextPage: boolean;
 };
@@ -25,10 +28,13 @@ export type PageType = {
 function BoardList(): React.ReactElement {
   const [list, setList] = useState([]);
   const [pageInfo, setPageInfo] = useState<PageType>({
-    page: 0,
-    size: 0,
-    itemCount: 0,
-    pageCount: 0,
+    curPage: 0,
+    perPage: 0,
+    listCnt: 0,
+    allRangeCnt: 0,
+    range: 0,
+    startPage: 0,
+    endPage: 0,
     hasPreviousPage: false,
     hasNextPage: false,
   });
@@ -36,9 +42,8 @@ function BoardList(): React.ReactElement {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const params = Object.fromEntries([...searchParams]);
-
-    axios.get("api/board", { params: params }).then((res) => {
+    const parameter = Object.fromEntries([...searchParams]);
+    axios.get("api/board", { params: parameter }).then((res) => {
       setList(res.data.list);
       setPageInfo(res.data.pageInfo);
     });
