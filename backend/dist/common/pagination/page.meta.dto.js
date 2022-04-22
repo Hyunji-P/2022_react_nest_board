@@ -2,13 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PageMetaDto = void 0;
 class PageMetaDto {
-    constructor(pageOptionsDto, itemCount) {
-        this.page = pageOptionsDto.page;
-        this.size = pageOptionsDto.size;
-        this.itemCount = itemCount;
-        this.pageCount = Math.ceil(this.itemCount / this.size);
-        this.hasPreviousPage = this.page > 1;
-        this.hasNextPage = this.page < this.pageCount;
+    constructor(pageParamsDto, listCnt) {
+        this.curPage = pageParamsDto.curPage;
+        this.perPage = pageParamsDto.perPage;
+        this.range = 5;
+        this.listCnt = listCnt;
+        this.allRangeCnt = Math.ceil(this.listCnt / this.perPage);
+        this.endPage = Math.ceil(this.curPage / this.range) * this.range;
+        this.startPage = this.endPage - this.range + 1;
+        this.hasPreviousPage = this.curPage > 1;
+        this.hasNextPage = this.curPage < this.allRangeCnt;
     }
 }
 exports.PageMetaDto = PageMetaDto;

@@ -8,7 +8,7 @@ import {
   Put,
   Query,
 } from "@nestjs/common";
-import { PageOptionsDto } from "src/common/pagination/page.options.dto";
+import { PageParamsDto } from "src/common/pagination/page.params.dto";
 import { BoardDto } from "src/dto/board.dto";
 import { BoardService } from "src/service/board.service";
 import { PageDto } from "./../common/pagination/page.dto";
@@ -29,9 +29,9 @@ export class BoardController {
    */
   @Get()
   async getAllBoard(
-    @Query() pageOptionsDto: PageOptionsDto
+    @Query() params: PageParamsDto
   ): Promise<PageDto<BoardDto>> {
-    return this.boardService.getAllBoard(pageOptionsDto);
+    return this.boardService.getAllBoard(params);
   }
 
   @Post()

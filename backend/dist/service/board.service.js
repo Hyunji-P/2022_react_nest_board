@@ -23,19 +23,19 @@ let BoardService = class BoardService {
     constructor(boardRepository) {
         this.boardRepository = boardRepository;
     }
-    async getAllBoard(pageOptionsDto) {
+    async getAllBoard(params) {
         const boardEntityList = this.boardRepository.findAll({
             raw: true,
-            offset: pageOptionsDto.offset,
-            limit: pageOptionsDto.size,
-            order: [['uuid', pageOptionsDto.order]],
+            offset: params.offset,
+            limit: params.perPage,
+            order: [["uuid", params.order]],
         });
         const boardList = [];
         (await boardEntityList).forEach((i) => {
             boardList.push((0, class_transformer_1.plainToClass)(board_dto_1.BoardDto, i));
         });
-        const itemCount = (await this.boardRepository.findAll()).length;
-        const pageInfo = new page_meta_dto_1.PageMetaDto(pageOptionsDto, itemCount);
+        const listCnt = (await this.boardRepository.findAll()).length;
+        const pageInfo = new page_meta_dto_1.PageMetaDto(params, listCnt);
         return new page_dto_1.PageDto(boardList, pageInfo);
     }
 };

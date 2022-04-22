@@ -1,10 +1,13 @@
-import { PageOptionsDto } from "./page.options.dto";
+import { PageParamsDto } from "./page.params.dto";
 export declare class PageMetaDto {
-    readonly page: number;
-    readonly size: number;
-    readonly itemCount: number;
-    readonly pageCount: number;
+    readonly curPage: number;
+    readonly perPage: number;
+    readonly range: number;
+    readonly listCnt: number;
+    readonly allRangeCnt: number;
+    readonly startPage: number;
+    readonly endPage: number;
     readonly hasPreviousPage: boolean;
     readonly hasNextPage: boolean;
-    constructor(pageOptionsDto: PageOptionsDto, itemCount: number);
+    constructor(pageParamsDto: PageParamsDto, listCnt: number);
 }

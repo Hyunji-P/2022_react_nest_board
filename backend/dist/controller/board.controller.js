@@ -14,15 +14,15 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BoardController = void 0;
 const common_1 = require("@nestjs/common");
-const page_options_dto_1 = require("../common/pagination/page.options.dto");
+const page_params_dto_1 = require("../common/pagination/page.params.dto");
 const board_dto_1 = require("../dto/board.dto");
 const board_service_1 = require("../service/board.service");
 let BoardController = class BoardController {
     constructor(boardService) {
         this.boardService = boardService;
     }
-    async getAllBoard(pageOptionsDto) {
-        return this.boardService.getAllBoard(pageOptionsDto);
+    async getAllBoard(params) {
+        return this.boardService.getAllBoard(params);
     }
     async postBoard(boardDto) {
         return;
@@ -38,7 +38,7 @@ __decorate([
     (0, common_1.Get)(),
     __param(0, (0, common_1.Query)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [page_options_dto_1.PageOptionsDto]),
+    __metadata("design:paramtypes", [page_params_dto_1.PageParamsDto]),
     __metadata("design:returntype", Promise)
 ], BoardController.prototype, "getAllBoard", null);
 __decorate([
